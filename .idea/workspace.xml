@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2c0e5b-98a3-4491-ba22-812303411788" name="Changes" comment="First commit.">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/src/main/java/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/src/test/java/Test.java" afterDir="false" />
+    <list default="true" id="6e2c0e5b-98a3-4491-ba22-812303411788" name="Changes" comment="Testing.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,19 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/Programas/Concurrentes/Parcial-Concurrentes",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pathVariables"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programas/Concurrentes/Parcial-Concurrentes&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Programas\Concurrentes\Parcial-Concurrentes\Java" />
@@ -71,7 +65,16 @@
       <option name="presentableId" value="Default" />
       <updated>1667538118163</updated>
       <workItem from="1667538120359" duration="653000" />
+      <workItem from="1667539091449" duration="18000" />
     </task>
+    <task id="LOCAL-00001" summary="Testing.">
+      <created>1667539049131</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667539049131</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +93,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit." />
+    <MESSAGE value="Testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing." />
   </component>
 </project>
