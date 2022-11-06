@@ -56,6 +56,6 @@ public class TCPServer50 {
     } 
 
     public interface OnMessageReceived {
-        public void messageReceived(String message);
+        public void messageReceived(String message) throws InterruptedException;
     }
 }

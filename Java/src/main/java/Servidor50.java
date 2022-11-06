@@ -1,13 +1,16 @@
 import java.util.Scanner;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingDeque;
 
 public class Servidor50 {
    TCPServer50 mTcpServer;
    Scanner sc;
-   public static void main(String[] args) {
+   static BlockingQueue<String> blockingQueue = new LinkedBlockingDeque<>(5);
+   public static void main(String[] args) throws InterruptedException {
        Servidor50 objser = new Servidor50();
        objser.iniciar();
    }
-   void iniciar(){
+   void iniciar() throws InterruptedException {
        new Thread(
             new Runnable() {
 
@@ -16,7 +19,7 @@ public class Servidor50 {
                       mTcpServer = new TCPServer50(
                         new TCPServer50.OnMessageReceived(){
                             @Override
-                            public void messageReceived(String message){
+                            public void messageReceived(String message) throws InterruptedException {
                                 ServidorRecibe(message);
                             }
                         }
@@ -36,12 +39,15 @@ public class Servidor50 {
        System.out.println("Servidor bandera 02"); 
    
    }
-   void ServidorRecibe(String llego){
+   void ServidorRecibe(String llego) throws InterruptedException {
+       blockingQueue.put(llego);
        System.out.println("SERVIDOR40 El mensaje:" + llego);
+       ServidorEnvia("s");
    }
-   void ServidorEnvia(String envia){
-        if (mTcpServer != null) {
-            mTcpServer.sendMessageTCPServer(envia);
-        }
+   void ServidorEnvia(String sus) throws InterruptedException {
+       String envia = blockingQueue.take();
+       if (mTcpServer != null) {
+           mTcpServer.sendMessageTCPServer(envia);
+       }
    }
 }
