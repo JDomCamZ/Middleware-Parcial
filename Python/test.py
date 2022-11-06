@@ -8,14 +8,12 @@ mi_socket.connect((ip,port))
 
 while True:
     mensaje=input(str)
-    if mensaje!='adios':
-        mi_socket.send(mensaje.encode())
+    mi_socket.send(mensaje.encode())
+    if mensaje!="adios":
         respuesta=mi_socket.recv(4000).decode()
         print(respuesta)
     else:
-        mi_socket.send(mensaje)
         mi_socket.close()
         sys.exit()
-
 
 
