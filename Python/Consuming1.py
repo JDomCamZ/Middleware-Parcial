@@ -2,7 +2,7 @@ import socket
 import sys
 import time
 
-ip='192.168.0.18'
+ip='192.168.0.10'
 port=4444
 
 mi_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -16,15 +16,14 @@ def working():
     print("terminó trabajo")
 
 
+mensaje='listo\n'
+mi_socket.send(mensaje.encode())
 print("Esperando mensaje de Producing")
 while True:
     respuesta=mi_socket.recv(4000).decode()
-    print([respuesta])
-    working()
+    #print([respuesta])
     if(respuesta=="ATLAS\r\n"):
-        
         print("DDDDDDD")
-    if(respuesta==2):
-        print("BBBBBBBB")
+    working()
     print("Poducing Mesage")
     print(respuesta)

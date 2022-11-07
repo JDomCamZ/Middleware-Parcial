@@ -26,6 +26,11 @@ public class TCPServer50 {
             System.out.println("ENVIANDO A JUGADOR " + (i));
         }
     }
+
+    public void sendColaMessageTCPServer(String message){
+        sendclis[1].sendMessage(message);
+        System.out.println("ENVIANDO A JUGADOR " + (1));
+    }
     
     public void run(){
         running = true;
