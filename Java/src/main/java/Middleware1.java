@@ -2,12 +2,12 @@ import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingDeque;
 
-public class Servidor50 {
+public class Middleware1 {
    TCPServer50 mTcpServer;
    Scanner sc;
    static BlockingQueue<String> blockingQueue = new LinkedBlockingDeque<>(5);
    public static void main(String[] args) throws InterruptedException {
-       Servidor50 objser = new Servidor50();
+       Middleware1 objser = new Middleware1();
        objser.iniciar();
    }
    void iniciar() throws InterruptedException {
