@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e2c0e5b-98a3-4491-ba22-812303411788" name="Changes" comment="Client made.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Cliente50.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Producing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/src/main/java/Middleware1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Middleware1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Java/src/main/java/Middleware2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Middleware2.java" afterDir="false" />
     </list>
@@ -46,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/Programas/Concurrentes/Galaga",
+    "last_opened_file_path": "D:/Programas/Concurrentes/Parcial-Concurrentes",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -64,14 +65,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Cliente50">
-    <configuration name="Cliente50" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Cliente50" />
-      <module name="Java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Producing">
     <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Demo" />
       <module name="Java" />
@@ -86,6 +80,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Middleware2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Middleware2" />
+      <module name="Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Producing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Producing" />
+      <module name="Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Queue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Queue" />
       <module name="Java" />
@@ -95,7 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Cliente50" />
+        <item itemvalue="Application.Producing" />
+        <item itemvalue="Application.Middleware2" />
         <item itemvalue="Application.Middleware1" />
         <item itemvalue="Application.Queue" />
         <item itemvalue="Application.Demo" />
@@ -116,6 +125,7 @@
       <workItem from="1667685690106" duration="1498000" />
       <workItem from="1667703489161" duration="2175000" />
       <workItem from="1667765978145" duration="5202000" />
+      <workItem from="1667842200717" duration="4872000" />
     </task>
     <task id="LOCAL-00001" summary="Testing.">
       <created>1667539049131</created>

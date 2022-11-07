@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-class Cliente50{
+class Producing {
     TCPClient50 mTcpClient;
     Scanner sc;
     public static void main(String[] args)  {
-        Cliente50 objcli = new Cliente50();
+        Producing objcli = new Producing();
         objcli.iniciar();
     }
     void iniciar(){

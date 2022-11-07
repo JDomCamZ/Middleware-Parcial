@@ -6,6 +6,7 @@ public class Middleware2 {
    TCPServer50 mTcpServer;
    Scanner sc;
    static BlockingQueue<String> blockingQueue = new LinkedBlockingDeque<>(5);
+   int llegocont = 0;
    public static void main(String[] args) throws InterruptedException {
        Middleware2 objser = new Middleware2();
        objser.iniciar();
@@ -40,9 +41,22 @@ public class Middleware2 {
    
    }
    void ServidorRecibe(String llego) throws InterruptedException {
-       blockingQueue.put(llego);
+       if (!llego.equals("listo") && blockingQueue.remainingCapacity()!=0)
+           blockingQueue.put(llego);
+       if (blockingQueue.remainingCapacity()==0) {
+           String cola = "COLA LLENA ESPERA POR FAVOR";
+           System.out.println(cola);
+           mTcpServer.sendColaMessageTCPServer(cola);
+       }
+       if (llego.equals("listo")){
+            llegocont++;
+       }
        System.out.println("SERVIDOR40 El mensaje:" + llego);
-       ServidorEnvia("s");
+       if (llegocont == mTcpServer.nrcli-1) {
+           llegocont = 0;
+           System.out.println(blockingQueue.remainingCapacity());
+           ServidorEnvia("s");
+       }
    }
    void ServidorEnvia(String sus) throws InterruptedException {
        String envia = blockingQueue.take();

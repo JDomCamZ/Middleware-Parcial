@@ -43,7 +43,7 @@ public class Middleware1 {
    void ServidorRecibe(String llego) throws InterruptedException {
        if (!llego.equals("listo") && blockingQueue.remainingCapacity()!=0)
            blockingQueue.put(llego);
-       else if (blockingQueue.remainingCapacity()==0) {
+       if (blockingQueue.remainingCapacity()==0) {
            String cola = "COLA LLENA ESPERA POR FAVOR";
            System.out.println(cola);
            mTcpServer.sendColaMessageTCPServer(cola);
