@@ -1,5 +1,3 @@
-package src.main;
-
 import java.util.Scanner;
 
 class Cliente50{
