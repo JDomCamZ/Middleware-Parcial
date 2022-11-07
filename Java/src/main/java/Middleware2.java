@@ -50,4 +50,7 @@ public class Middleware2 {
            mTcpServer.sendMessageTCPServer(envia);
        }
    }
+   void AddProducer () {
+
+   }
 }

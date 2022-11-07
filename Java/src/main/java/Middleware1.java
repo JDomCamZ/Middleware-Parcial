@@ -44,8 +44,8 @@ public class Middleware1 {
        if (!llego.equals("listo") && blockingQueue.remainingCapacity()!=0)
            blockingQueue.put(llego);
        else if (blockingQueue.remainingCapacity()==0) {
-           System.out.println("COLA LLENA ESPERA POR FAVOR");
            String cola = "COLA LLENA ESPERA POR FAVOR";
+           System.out.println(cola);
            mTcpServer.sendColaMessageTCPServer(cola);
        }
        System.out.println("SERVIDOR40 El mensaje:" + llego);
