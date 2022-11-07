@@ -20,10 +20,14 @@ def working():
 
 mensaje='listo\n'
 mi_socket.send(mensaje.encode())
+respuesta=mi_socket.recv(4000).decode()
+if(respuesta=="Is Producer or Consuming?\r\n"):
+        mensaje='Consumer\n'
+        mi_socket.send(mensaje.encode())
 print("Esperando mensaje de Producing")
 while True:
-    respuesta=mi_socket.recv(4000).decode()
-    #print([respuesta])
+    respuesta=mi_socket.recv(4000).decode()    
+    #print([respuesta])        
     if(respuesta=="ATLAS\r\n"):
         print("DDDDDDD")
     working()
