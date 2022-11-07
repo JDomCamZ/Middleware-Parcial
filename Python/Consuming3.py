@@ -15,6 +15,7 @@ def recivir():
         respuesta=mi_socket.recv(4000).decode()
         print(respuesta)
 
+
 threadReciv=threading.Thread(name="h1",target=recivir,args=())    
 threadReciv.start()
 

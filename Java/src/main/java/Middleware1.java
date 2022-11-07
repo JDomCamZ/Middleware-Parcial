@@ -44,7 +44,7 @@ public class Middleware1 {
            blockingQueue.put(llego);
        }
        System.out.println("SERVIDOR40 El mensaje:" + llego);
-       if (!llego.equals("listo") || blockingQueue.remainingCapacity()==5) {
+       if (!llego.equals("listo") || blockingQueue.remainingCapacity()==4) {
            ServidorEnvia("s");
        }
    }

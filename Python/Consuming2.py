@@ -10,7 +10,7 @@ mi_socket.connect((ip,port))
 
 def cron():
     time.sleep(3)
-    print("Listo")
+    print("listo\n")
  
 
 while True:
@@ -18,7 +18,6 @@ while True:
     mensaje+='\n'
     mi_socket.send(mensaje.encode())
     if mensaje!="adios\n":
-        cron()
         respuesta=mi_socket.recv(4000).decode()
         print(respuesta)
     else:
