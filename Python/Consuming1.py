@@ -1,6 +1,7 @@
 import socket
 import sys
 import time
+import random
 
 ip='192.168.0.10'
 port=4444
@@ -10,7 +11,8 @@ mi_socket.connect((ip,port))
 
 
 def working():
-    time.sleep(3)
+    timetosleep = random.random() * 3 + 1
+    time.sleep(timetosleep)
     mensaje='listo\n'
     mi_socket.send(mensaje.encode())
     print("terminó trabajo")
