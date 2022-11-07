@@ -2,7 +2,7 @@ import socket
 import sys
 import threading
 import time
-ip='192.168.0.18'
+ip='192.168.0.10'
 port=4444
 
 mi_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -15,6 +15,7 @@ def recivir():
             break
         respuesta=mi_socket.recv(4000).decode()
         print(respuesta)
+        working()
 
 
 def working():

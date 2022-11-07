@@ -21,7 +21,7 @@ public class TCPServer50 {
         return this.messageListener;
     }
     public void sendMessageTCPServer(String message){
-        for (int i = 1; i <= nrcli; i++) {
+        for (int i = 2; i <= nrcli; i++) {
             sendclis[i].sendMessage(message);
             System.out.println("ENVIANDO A JUGADOR " + (i));
         }

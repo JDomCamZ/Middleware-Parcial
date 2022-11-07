@@ -40,9 +40,13 @@ public class Middleware1 {
    
    }
    void ServidorRecibe(String llego) throws InterruptedException {
-       blockingQueue.put(llego);
+       if (!llego.equals("listo")) {
+           blockingQueue.put(llego);
+       }
        System.out.println("SERVIDOR40 El mensaje:" + llego);
-       ServidorEnvia("s");
+       if (!llego.equals("listo") || blockingQueue.remainingCapacity()==5) {
+           ServidorEnvia("s");
+       }
    }
    void ServidorEnvia(String sus) throws InterruptedException {
        String envia = blockingQueue.take();
