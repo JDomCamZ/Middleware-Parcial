@@ -38,7 +38,12 @@ class Producing {
     
     }
     void ClienteRecibe(String llego){
-        System.out.println("CLINTE50 El mensaje::" + llego);
+        if (llego.equals("Is Producer or Consuming?")) {
+            System.out.println("CLINTE50 El mensaje::" + llego);
+            ClienteEnvia("Producer");
+        }
+        else
+            System.out.println("CLINTE50 El mensaje::" + llego);
 
     }
     void ClienteEnvia(String envia){

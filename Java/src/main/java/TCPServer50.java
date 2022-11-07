@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class TCPServer50 {
     private String message;
@@ -20,16 +22,24 @@ public class TCPServer50 {
     public OnMessageReceived getMessageListener(){
         return this.messageListener;
     }
-    public void sendMessageTCPServer(String message){
-        for (int i = 2; i <= nrcli; i++) {
-            sendclis[i].sendMessage(message);
-            System.out.println("ENVIANDO A JUGADOR " + (i));
+    public void sendConsumingMessageTCPServer(String message, ArrayList<Integer> consumers){
+        for (int i = 0; i < consumers.size(); i++) {
+            sendclis[consumers.get(i)].sendMessage(message);
+            System.out.println("ENVIANDO A CONSUMING " + (i+1));
         }
     }
+    public void sendProducerConsuming(int index) {
+        sendclis[index].sendMessage("Is Producer or Consuming?");
+        System.out.println("ENVIANDO A CLIENTE " + (index));
+    }
 
-    public void sendColaMessageTCPServer(String message){
-        sendclis[1].sendMessage(message);
-        System.out.println("ENVIANDO A JUGADOR " + (1));
+    public void sendProducerMessageTCPServer(String message, int indexProducer){
+        sendclis[indexProducer].sendMessage(message);
+        System.out.println("ENVIANDO A PRODUCER " + (indexProducer));
+    }
+
+    public int IDClient(){
+        return nrcli;
     }
     
     public void run(){
@@ -47,7 +57,8 @@ public class TCPServer50 {
                 Thread t = new Thread(sendclis[nrcli]);
                 t.start();
                 System.out.println("Nuevo conectado:"+ nrcli+" jugadores conectados");
-                
+                TimeUnit.SECONDS.sleep(5);
+                sendProducerConsuming(nrcli);
             }
             
         }catch( Exception e){
