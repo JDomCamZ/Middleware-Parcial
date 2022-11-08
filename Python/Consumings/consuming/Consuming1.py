@@ -18,46 +18,17 @@ def working():
     print("terminó trabajo")
 
 
-def conect(ip_,port_):
-    mi_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    mi_socket.connect((ip_,port_)) 
-
-    mensaje='listo\n'
-    mi_socket.send(mensaje.encode())
-    respuesta=mi_socket.recv(4000).decode()
-
-    if(respuesta=="Is Producer or Consuming?\r\n"):
-        mensaje='Consumer\n'
-        mi_socket.send(mensaje.encode())
-    print("Esperando mensaje de Producing")
-    
-    while True:
-        respuesta=mi_socket.recv(4000).decode()    
-        print("Poducing Mesage")
-        print(respuesta)
-        working()
-
-
 mensaje='listo\n'
 mi_socket.send(mensaje.encode())
 respuesta=mi_socket.recv(4000).decode()
 
 if(respuesta=="Is Producer or Consuming?\r\n"):
-    mensaje='Consumer\n'
-    mi_socket.send(mensaje.encode())
+        mensaje='Consumer\n'
+        mi_socket.send(mensaje.encode())
 print("Esperando mensaje de Producing")
-    
+
 while True:
     respuesta=mi_socket.recv(4000).decode()    
     print("Poducing Mesage")
     print(respuesta)
     working()
-
-
-
-
-
-
-
-
-
