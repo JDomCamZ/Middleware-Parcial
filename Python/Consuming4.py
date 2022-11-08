@@ -10,7 +10,7 @@ mi_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 mi_socket.connect((ip,port))
 mensaje=""
 
-def recivir():
+def recibir():
     while(True):
         if(mensaje=="adios\n"):
             break
@@ -46,9 +46,9 @@ if(respuesta=="Is Producer or Consuming?\r\n"):
         mi_socket.send(mensaje.encode())
 print("Esperando mensaje de Producing")
 
-threadReciv=threading.Thread(name="h1",target=recivir,args=())    
+threadRecib=threading.Thread(name="h1",target=recibir,args=())    
 threadSend=threading.Thread(name="h2",target=send,args=())    
 
-threadReciv.start()
+threadRecib.start()
 threadSend.start()
 
