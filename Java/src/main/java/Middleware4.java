@@ -96,13 +96,13 @@ public class Middleware4 {
     void ServidorEnvia(String sus) throws InterruptedException {
         String envia = blockingQueue.take();
         if (mTcpServer != null) {
-            mTcpServer.sendConsumingMessageTCPServer(envia, consumer);
+            mTcpServer.sendConsumingMessageTCPServer(envia, consumer,-1);
         }
     }
     void ConsumingEnvia(String sus) throws InterruptedException {
         String enviaP = consumingQueue.take();
         if (mTcpServer != null) {
-            mTcpServer.sendConsumingMessageTCPServer(enviaP,producer);
+            mTcpServer.sendConsumingMessageTCPServer(enviaP,producer,-1);
         }
     }
     void AddProducer (int ID) {
