@@ -45,10 +45,7 @@ public class Middleware4 {
         System.out.println("Servidor bandera 02");
     }
     void ServidorRecibe(String llego) throws InterruptedException {
-
-        System.out.println("SPLITTTTTTTTTTTTTTTTTTTTTT");
         String[] t =llego.split("tt");
-        System.out.println("primera parte "+t[0]);
         if(t[0].equals("c")){
             ProducerRecibe(t[1]);
         }else{
@@ -66,7 +63,7 @@ public class Middleware4 {
             }
             if (llego.equals("listo"))
                 ready = true;
-            System.out.println("-----SERVIDOR40 El mensaje:" + llego);
+            System.out.println("SERVIDOR40 El mensaje:" + llego);
             if ((ready==true && consumer.size()>0 && producer.size()>0) && !blockingQueue.isEmpty()) {
                 ready = false;
                 //System.out.println(blockingQueue.remainingCapacity());
@@ -89,11 +86,10 @@ public class Middleware4 {
         }
         if (llego.equals("listo"))
             readyOther = true;
-        System.out.println("a producer---SERVIDOR40 El mensaje:" + llego);
+        System.out.println("SERVIDOR40 El mensaje:" + llego);
         if ((readyOther==true && consumer.size()>0 && producer.size()>0) && !consumingQueue.isEmpty()) {
-            System.out.println("ENVIAAAAAAAAAAAAAAAAA");
             readyOther = false;
-            System.out.println(consumingQueue.remainingCapacity());
+            //System.out.println(consumingQueue.remainingCapacity());
             ConsumingEnvia("s");
         }
     }

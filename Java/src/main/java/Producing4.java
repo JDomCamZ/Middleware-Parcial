@@ -1,13 +1,14 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-class Producing2 {
+public class Producing4 {
     TCPClient50 mTcpClient;
     Scanner sc;
     public static void main(String[] args)  {
-        Producing2 objcli = new Producing2();
+        Producing4 objcli = new Producing4();
         objcli.iniciar();
     }
+
     void iniciar(){
         new Thread(
                 new Runnable() {
@@ -42,6 +43,7 @@ class Producing2 {
         if (llego.equals("Is Producer or Consuming?")) {
             System.out.println("CLINTE50 El mensaje::" + llego);
             ClienteEnvia("Producer");
+            ClienteEnvia("cttlisto");
         }
         else{
             System.out.println("CLINTE50 El mensaje::" + llego);
