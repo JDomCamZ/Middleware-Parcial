@@ -75,7 +75,7 @@ public class Middleware2 {
    void ServidorEnvia(String sus) throws InterruptedException {
        String envia = blockingQueue.take();
        if (mTcpServer != null) {
-           mTcpServer.sendConsumingMessageTCPServer(envia, consumer);
+           mTcpServer.sendConsumingMessageTCPServer(envia, consumer, -1);
        }
    }
    void AddProducer (int ID) {

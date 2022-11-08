@@ -22,10 +22,15 @@ public class TCPServer50 {
     public OnMessageReceived getMessageListener(){
         return this.messageListener;
     }
-    public void sendConsumingMessageTCPServer(String message, ArrayList<Integer> consumers){
-        for (int i = 0; i < consumers.size(); i++) {
-            sendclis[consumers.get(i)].sendMessage(message);
-            System.out.println("ENVIANDO A CONSUMING " + (i+1));
+    public void sendConsumingMessageTCPServer(String message, ArrayList<Integer> consumers, int a){
+        if(a == -1) {
+            for (int i = 0; i < consumers.size(); i++) {
+                sendclis[consumers.get(i)].sendMessage(message);
+                System.out.println("ENVIANDO A CONSUMING " + (i + 1));
+            }
+        }else{
+            sendclis[a].sendMessage(message);
+            System.out.println("ENVIANDO A CONSUMING " + (a + 1));
         }
     }
     public void sendProducerConsuming(int index) {
