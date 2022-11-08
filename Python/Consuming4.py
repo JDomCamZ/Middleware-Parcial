@@ -2,6 +2,7 @@ import socket
 import sys
 import threading
 import time
+import random
 ip='192.168.0.18'
 port=4444
 
@@ -19,21 +20,31 @@ def recivir():
 
 
 def working():
-    time.sleep(2)
+    timetosleep = random.random() * 3 + 1
+    time.sleep(timetosleep)
     mensaje='listo\n'
     mi_socket.send(mensaje.encode())
     print("terminó trabajo")
 
+
 def send():
     while True:
-        mensaje=input()
+        escribe=input()
+        mensaje="ctt"+escribe
         mensaje+='\n'
         mi_socket.send(mensaje.encode())
-        if mensaje=="adios\n":
+        if mensaje=="cppadios\n":
             mi_socket.close()        
             sys.exit()
 
+mensaje='listo\n'
+mi_socket.send(mensaje.encode())
+respuesta=mi_socket.recv(4000).decode()
 
+if(respuesta=="Is Producer or Consuming?\r\n"):
+        mensaje='Consumer\n'
+        mi_socket.send(mensaje.encode())
+print("Esperando mensaje de Producing")
 
 threadReciv=threading.Thread(name="h1",target=recivir,args=())    
 threadSend=threading.Thread(name="h2",target=send,args=())    
