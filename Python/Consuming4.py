@@ -3,7 +3,7 @@ import sys
 import threading
 import time
 import random
-ip='192.168.0.18'
+ip='192.168.0.10'
 port=4444
 
 mi_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)

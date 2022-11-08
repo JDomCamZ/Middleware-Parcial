@@ -48,22 +48,24 @@ public class Middleware3 {
             AddProducer(mTcpServer.IDClient());
         } else if (llego.equals("Consumer")) {
             AddConsuming(mTcpServer.IDClient());
-            if(consumer.size()>0)
-                colas.put(consumer.size(), new LinkedBlockingDeque<>(5));
-        } else if (!llego.equals("listo") && (colas.get(consumer.size())).remainingCapacity() != 0) {
+            if(consumer.size()>1)
+                colas.put(consumer.size()-1, new LinkedBlockingDeque<>(5));
+        } else if (!llego.equals("listo") && (colas.get(consumer.size()-1)).remainingCapacity() != 0) {
             colas.forEach((k,v) -> {
                 try {
                     v.put(llego);
+                    //System.out.println(colas);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
             });
         }
-
-        if ((colas.get(consumer.size())).remainingCapacity() == 0) {
-            String cola = "COLA LLENA ESPERA POR FAVOR";
-            System.out.println(cola);
-            mTcpServer.sendProducerMessageTCPServer(cola, producer.get(0));
+        if(consumer.size()>0) {
+            if ((colas.get(consumer.size()-1)).remainingCapacity() == 0) {
+                String cola = "COLA LLENA ESPERA POR FAVOR";
+                System.out.println(cola);
+                mTcpServer.sendProducerMessageTCPServer(cola, producer.get(0));
+            }
         }
 
         if (llego.equals("listo")) {
@@ -71,8 +73,9 @@ public class Middleware3 {
         }
 
         System.out.println("SERVIDOR40 El mensaje:" + llego);
-        if (llegocont == mTcpServer.nrcli - 1 && consumer.size() > 0 && producer.size() > 0 && !(colas.get(consumer.size())).isEmpty()) {
+        if (llegocont == mTcpServer.nrcli - 1 && consumer.size() > 0 && producer.size() > 0 && !(colas.get(consumer.size()-1)).isEmpty()) {
             llegocont = 0;
+            //System.out.println(colas.get(consumer.indexOf(consumer.get(1))).remainingCapacity());
             ServidorEnvia("s");
         }
 

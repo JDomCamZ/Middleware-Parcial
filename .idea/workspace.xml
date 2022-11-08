@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2c0e5b-98a3-4491-ba22-812303411788" name="Changes" comment="Finalizing middleware 1 and 2.">
+    <list default="true" id="6e2c0e5b-98a3-4491-ba22-812303411788" name="Changes" comment="Done Middleware 1 and 2 with indexation.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Middleware1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Middleware1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Middleware2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Middleware2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Producing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Producing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/TCPServer50.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/TCPServer50.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/Middleware3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/Middleware3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/Consuming4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/Consuming4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,22 +65,22 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Producing">
-    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Demo" />
-      <module name="Java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Middleware1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Middleware1" />
-      <module name="Java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Middleware2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Middleware2" />
+      <module name="Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Middleware3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Middleware3" />
+      <module name="Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Middleware4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Middleware4" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -95,8 +93,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Queue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Queue" />
+    <configuration name="Producing2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Producing2" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,10 +103,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Producing" />
-        <item itemvalue="Application.Middleware1" />
+        <item itemvalue="Application.Middleware3" />
         <item itemvalue="Application.Middleware2" />
-        <item itemvalue="Application.Queue" />
-        <item itemvalue="Application.Demo" />
+        <item itemvalue="Application.Producing2" />
+        <item itemvalue="Application.Middleware4" />
       </list>
     </recent_temporary>
   </component>
